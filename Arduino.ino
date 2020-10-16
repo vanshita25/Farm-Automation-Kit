@@ -3,7 +3,6 @@
  * To be used with ArduFarmBot tutorial
  * MJRoBot 21Aug16
  ****************************************************************/
-// Include DHT Library
 #include <DHT.h>
 
 // Sensor definitions
@@ -34,7 +33,6 @@ void setup()
 
 void loop() 
 {
-  // Wait a few seconds between measurements.
   delay(2000);
   readSensors();
   printData(); 
@@ -51,9 +49,6 @@ void readSensors(void)
   soilMoist = getSoilMoist();
 }
 
-/***************************************************
-* Capture luminosity data: 0% full dark to 100% full light
-****************************************************/
 int getLumen(int anaPin)
 {
   int anaValue = 0;
